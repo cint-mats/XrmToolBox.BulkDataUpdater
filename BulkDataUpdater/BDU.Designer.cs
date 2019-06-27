@@ -71,6 +71,9 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.chkIgnoreErrors = new System.Windows.Forms.CheckBox();
             this.gb4update = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbUpdDelayCall = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.cmbUpdBatchSize = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblUpdateStatus = new System.Windows.Forms.Label();
@@ -339,7 +342,7 @@
             this.btnGetEdit.Name = "btnGetEdit";
             this.btnGetEdit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnGetEdit.Size = new System.Drawing.Size(114, 39);
-            this.btnGetEdit.TabIndex = 20;
+            this.btnGetEdit.TabIndex = 2;
             this.btnGetEdit.Tag = "Edit";
             this.btnGetEdit.Text = "Edit FetchXML";
             this.btnGetEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -367,7 +370,7 @@
             this.cmbAttribute.Name = "cmbAttribute";
             this.cmbAttribute.Size = new System.Drawing.Size(298, 21);
             this.cmbAttribute.Sorted = true;
-            this.cmbAttribute.TabIndex = 26;
+            this.cmbAttribute.TabIndex = 1;
             this.cmbAttribute.Tag = "attribute";
             this.cmbAttribute.SelectedIndexChanged += new System.EventHandler(this.cmbAttribute_SelectedIndexChanged);
             this.cmbAttribute.TextChanged += new System.EventHandler(this.cmbAttribute_TextChanged);
@@ -440,7 +443,7 @@
             this.gb1select.Location = new System.Drawing.Point(0, 0);
             this.gb1select.Name = "gb1select";
             this.gb1select.Size = new System.Drawing.Size(499, 91);
-            this.gb1select.TabIndex = 34;
+            this.gb1select.TabIndex = 1;
             this.gb1select.TabStop = false;
             this.gb1select.Text = "1. Select records to update";
             // 
@@ -452,7 +455,7 @@
             this.btnGetFile.Name = "btnGetFile";
             this.btnGetFile.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnGetFile.Size = new System.Drawing.Size(114, 39);
-            this.btnGetFile.TabIndex = 40;
+            this.btnGetFile.TabIndex = 4;
             this.btnGetFile.Tag = "File";
             this.btnGetFile.Text = "Open File";
             this.btnGetFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -468,7 +471,7 @@
             this.btnGetView.Name = "btnGetView";
             this.btnGetView.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnGetView.Size = new System.Drawing.Size(114, 39);
-            this.btnGetView.TabIndex = 30;
+            this.btnGetView.TabIndex = 3;
             this.btnGetView.Tag = "View";
             this.btnGetView.Text = "Open View";
             this.btnGetView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -484,7 +487,7 @@
             this.btnGetFXB.Name = "btnGetFXB";
             this.btnGetFXB.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnGetFXB.Size = new System.Drawing.Size(129, 39);
-            this.btnGetFXB.TabIndex = 10;
+            this.btnGetFXB.TabIndex = 1;
             this.btnGetFXB.Tag = "FXB";
             this.btnGetFXB.Text = "FetchXML Builder";
             this.btnGetFXB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -534,27 +537,68 @@
             // 
             this.chkIgnoreErrors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkIgnoreErrors.AutoSize = true;
-            this.chkIgnoreErrors.Location = new System.Drawing.Point(181, 22);
+            this.chkIgnoreErrors.Location = new System.Drawing.Point(204, 50);
             this.chkIgnoreErrors.Name = "chkIgnoreErrors";
             this.chkIgnoreErrors.Size = new System.Drawing.Size(85, 17);
-            this.chkIgnoreErrors.TabIndex = 34;
+            this.chkIgnoreErrors.TabIndex = 3;
             this.chkIgnoreErrors.Text = "Ignore errors";
             this.chkIgnoreErrors.UseVisualStyleBackColor = true;
             // 
             // gb4update
             // 
+            this.gb4update.Controls.Add(this.label5);
+            this.gb4update.Controls.Add(this.cmbUpdDelayCall);
+            this.gb4update.Controls.Add(this.label4);
             this.gb4update.Controls.Add(this.cmbUpdBatchSize);
             this.gb4update.Controls.Add(this.label3);
             this.gb4update.Controls.Add(this.lblUpdateStatus);
             this.gb4update.Controls.Add(this.btnUpdate);
             this.gb4update.Controls.Add(this.chkIgnoreErrors);
             this.gb4update.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gb4update.Location = new System.Drawing.Point(3, 377);
+            this.gb4update.Location = new System.Drawing.Point(3, 349);
             this.gb4update.Name = "gb4update";
-            this.gb4update.Size = new System.Drawing.Size(330, 89);
+            this.gb4update.Size = new System.Drawing.Size(330, 117);
             this.gb4update.TabIndex = 37;
             this.gb4update.TabStop = false;
             this.gb4update.Text = "Execute update";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(201, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 101;
+            this.label5.Text = "seconds";
+            // 
+            // cmbUpdDelayCall
+            // 
+            this.cmbUpdDelayCall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmbUpdDelayCall.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUpdDelayCall.FormattingEnabled = true;
+            this.cmbUpdDelayCall.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "10",
+            "30",
+            "60",
+            "120",
+            "300"});
+            this.cmbUpdDelayCall.Location = new System.Drawing.Point(113, 20);
+            this.cmbUpdDelayCall.Name = "cmbUpdDelayCall";
+            this.cmbUpdDelayCall.Size = new System.Drawing.Size(75, 21);
+            this.cmbUpdDelayCall.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Wait betw. calls";
             // 
             // cmbUpdBatchSize
             // 
@@ -570,16 +614,16 @@
             "200",
             "500",
             "1000"});
-            this.cmbUpdBatchSize.Location = new System.Drawing.Point(92, 20);
+            this.cmbUpdBatchSize.Location = new System.Drawing.Point(113, 49);
             this.cmbUpdBatchSize.Name = "cmbUpdBatchSize";
             this.cmbUpdBatchSize.Size = new System.Drawing.Size(75, 21);
-            this.cmbUpdBatchSize.TabIndex = 36;
+            this.cmbUpdBatchSize.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 23);
+            this.label3.Location = new System.Drawing.Point(44, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 35;
@@ -587,20 +631,21 @@
             // 
             // lblUpdateStatus
             // 
+            this.lblUpdateStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblUpdateStatus.AutoSize = true;
-            this.lblUpdateStatus.Location = new System.Drawing.Point(18, 61);
+            this.lblUpdateStatus.Location = new System.Drawing.Point(18, 89);
             this.lblUpdateStatus.Name = "lblUpdateStatus";
             this.lblUpdateStatus.Size = new System.Drawing.Size(86, 13);
-            this.lblUpdateStatus.TabIndex = 1;
+            this.lblUpdateStatus.TabIndex = 100;
             this.lblUpdateStatus.Text = "Nothing updated";
             // 
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(204, 56);
+            this.btnUpdate.Location = new System.Drawing.Point(204, 84);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(109, 23);
-            this.btnUpdate.TabIndex = 0;
+            this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update records";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -649,7 +694,7 @@
             this.panel1.Location = new System.Drawing.Point(3, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(493, 24);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 1;
             // 
             // rbIncludeSelected
             // 
@@ -741,8 +786,8 @@
             this.gb3attributes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gb3attributes.Location = new System.Drawing.Point(3, 157);
             this.gb3attributes.Name = "gb3attributes";
-            this.gb3attributes.Size = new System.Drawing.Size(330, 220);
-            this.gb3attributes.TabIndex = 38;
+            this.gb3attributes.Size = new System.Drawing.Size(330, 192);
+            this.gb3attributes.TabIndex = 36;
             this.gb3attributes.TabStop = false;
             this.gb3attributes.Text = "Verify attributes to update";
             // 
@@ -759,8 +804,8 @@
             this.lvAttributes.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvAttributes.Location = new System.Drawing.Point(15, 19);
             this.lvAttributes.Name = "lvAttributes";
-            this.lvAttributes.Size = new System.Drawing.Size(298, 166);
-            this.lvAttributes.TabIndex = 2;
+            this.lvAttributes.Size = new System.Drawing.Size(298, 138);
+            this.lvAttributes.TabIndex = 1;
             this.lvAttributes.UseCompatibleStateImageBehavior = false;
             this.lvAttributes.View = System.Windows.Forms.View.Details;
             this.lvAttributes.SelectedIndexChanged += new System.EventHandler(this.lvAttributes_SelectedIndexChanged);
@@ -788,10 +833,10 @@
             // btnRemove
             // 
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemove.Location = new System.Drawing.Point(204, 191);
+            this.btnRemove.Location = new System.Drawing.Point(204, 163);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(109, 23);
-            this.btnRemove.TabIndex = 1;
+            this.btnRemove.TabIndex = 2;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
@@ -851,7 +896,7 @@
             this.chkDelIgnoreErrors.Location = new System.Drawing.Point(211, 328);
             this.chkDelIgnoreErrors.Name = "chkDelIgnoreErrors";
             this.chkDelIgnoreErrors.Size = new System.Drawing.Size(85, 17);
-            this.chkDelIgnoreErrors.TabIndex = 35;
+            this.chkDelIgnoreErrors.TabIndex = 4;
             this.chkDelIgnoreErrors.Text = "Ignore errors";
             this.chkDelIgnoreErrors.UseVisualStyleBackColor = true;
             // 
@@ -865,7 +910,7 @@
             this.btnDelete.Location = new System.Drawing.Point(50, 365);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(280, 50);
-            this.btnDelete.TabIndex = 4;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1041,5 +1086,8 @@
         private System.Windows.Forms.RadioButton rbIncludeAll;
         private System.Windows.Forms.RadioButton rbIncludeSelected;
         private System.Windows.Forms.Label lblIncludedRecords;
+        private System.Windows.Forms.ComboBox cmbUpdDelayCall;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
